@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Character Animation Slider</title>
+    <link rel="stylesheet" href="css2.css" />
+  </head>
+  <body>
+    <a href="https://www.example.com" target="_blank">
+      <img
+        src="Back Arrow-595b40b85ba036ed117dbfc5.svg"
+        alt="Link Icon"
+        class="top-left-icon"
+      />
+    </a>
+    <div class="container">
+      <div class="arrow left-arrow" onclick="prevCharacter()">&#9664;</div>
+      <div class="animation-container">
+        <img id="character-animation" src="ken.gif" alt="Character Animation" />
+      </div>
+      <div class="arrow right-arrow" onclick="nextCharacter()">&#9654;</div>
+    </div>
+    <div class="button-container" id="button-container">
+      <!-- Кнопки анимаций будут добавляться динамически -->
+    </div>
+    <script src="js.js"></script>
+    <script>
+      // Создание кнопок анимации при загрузке страницы
+      window.onload = function () {
+        updateButtons();
+      };
+    </script>
+  </body>
+</html>

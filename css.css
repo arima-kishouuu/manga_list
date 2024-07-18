@@ -1,0 +1,239 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    background: url("") no-repeat center;
+    background-size: 1000px auto;
+}
+
+.container {
+    position: relative;
+    width: 200px;
+    height: 200px;
+}
+
+.square {
+    position: absolute;
+    opacity: 0;
+    animation: appear 2s forwards;
+    border: 2px solid black; /* Чёрная обводка */
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.square::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    transition: background-color 0.3s;
+    z-index: 1;
+}
+
+.square:hover {
+    transform: scale(1.1);
+    z-index: 2;
+}
+
+.container:hover .square:not(:hover)::before {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.square1 {
+    width: 330px;
+    height: 320px;
+    top: -105%;
+    right: 115%;
+    transform: translate(-50%, -100%);
+    clip-path: polygon(0 0, 100% 0, 89% 95%, 0 86%);
+    animation-delay: 0s;
+    background-image: url('e342573650502125d033e780db5e00c8.jpg'); /* относительный путь */
+    background-size: cover;
+    background-position: 50% 30%;
+    background-repeat: no-repeat;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.square1::before {
+    content: 'characters';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: transparent; /* Скрыть текст по умолчанию */
+    font-size: 48px;
+    font-weight: bold;
+    transition: color 0.3s, text-shadow 0.3s;
+    text-shadow: none;
+}
+
+.square1:hover::before {
+    color: white; /* Показать текст при наведении */
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /* Добавить обводку */
+}
+
+.square2 {
+    content: 'characters';
+    width: 320px;
+    height: 390px;
+    top: -105%;
+    left: -25%;
+    transform: translate(0, -50%);
+    clip-path: polygon(15% 0, 100% 0, 100% 95%, 0% 100%);
+    animation-delay: 0.5s;
+    background-image: url('EdfE9U-XsAIQD6t.jpg');
+    background-position: 70% 100%;
+    background-size: 210%;
+    background-repeat: no-repeat;
+}
+
+.square2::before {
+    content: 'characters';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: transparent; /* Скрыть текст по умолчанию */
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.square2:hover::before {
+  color: white; /* Показать текст при наведении */
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+.square3 {
+    width: 320px;
+    height: 630px;
+    top: -105%;
+    left: 145%;
+    transform: translate(-50%, 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 4% 100%);
+    animation-delay: 1s;
+    background-image: url('Tomura_Shigaraki_manga.webp');
+    background-position: 100% 100%;
+    background-size: 130%;
+    background-repeat: no-repeat;
+}
+
+.square3::before {
+    content: 'abyss';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: transparent; /* Скрыть текст по умолчанию */
+    font-size: 48px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.square3:hover::before {
+    color: white; /* Показать текст при наведении */
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+.square4 {
+    width: 320px;
+    height: 320px;
+    top: 50%;
+    left: -180%;
+    transform: translate(-100%, -50%);
+    clip-path: polygon(0 4%, 90% 13%, 79% 100%, 4% 100%);
+    animation-delay: 1.5s;
+    background-image: url('FMJisJRXwAQR5Be.jpg'); /* относительный путь */
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.square4::before {
+    content: 'characters';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: transparent; /* Скрыть текст по умолчанию */
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.square4:hover::before {
+    color: white; /* Показать текст при наведении */
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+.square5 {
+    width: 360px;
+    height: 230px;
+    top: 153%;
+    left: 45%;
+    transform: translate(-50%, -50%) scale(0);
+    clip-path: polygon(8% 8%, 100% 0, 100% 100%, 0% 100%);
+    animation: appear5 2s forwards;
+    animation-delay: 2s;
+    background-image: url('tumblr_441d353c8f675029d7b8ba6bb3161a4d_73721686_640\ \(1\).jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.square5::before {
+    content: 'manga list';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: transparent; /* Скрыть текст по умолчанию */
+    font-size: 48px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.square5:hover::before {
+    color: white; /* Показать текст при наведении */
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+@keyframes appear {
+    to {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes appear5 {
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+.icon-panel {
+    position: fixed;
+    top: -45px; /* Скрываем панель за пределами экрана, кроме иконок */
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    transition: top 0.3s;
+    overflow: hidden;
+}
+
+.icon-panel .icon {
+    color: white;
+    font-size: 24px;
+    transition: transform 0.3s;
+}
+
+.icon-panel .icon:hover {
+    transform: scale(1.2);
+}
+
+.icon-panel:hover {
+    top: 0; /* Показать панель при наведении */
+}
